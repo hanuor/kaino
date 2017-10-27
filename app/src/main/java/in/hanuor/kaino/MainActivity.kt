@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0f, locationListener)
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0f, locationListener)
 
         val GPSlocationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
         val gpsLocationListener = GPSLocationListener()

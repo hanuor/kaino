@@ -3,6 +3,7 @@ package `in`.hanuor.kaino
 import android.location.Location
 import android.location.LocationListener
 import android.os.Bundle
+import android.util.Log
 
 /*
  * Copyright (C) 2016 Hanuor Inc. by Shantanu Johri(https://hanuor.github.io/shanjohri/)
@@ -22,6 +23,8 @@ import android.os.Bundle
 class GPSLocationListener: LocationListener {
     override fun onLocationChanged(p0: Location?) {
         //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+""
+        Log.d("Hey GPS", "" + p0?.accuracy + "  as " + p0?.longitude)
     }
 
     override fun onStatusChanged(p0: String?, p1: Int, p2: Bundle?) {
