@@ -15,10 +15,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var locationManager: LocationManager = this.getSystemService(android.content.Context.LOCATION_SERVICE) as LocationManager
-        var locationListener = object:LocationListener{
+        var locationListener = object : LocationListener {
             override fun onLocationChanged(p0: Location?) {
                 //get location
-                Log.d("Hey location!", "" + p0?.accuracy)
+                Log.d("Hey location!", "" + p0?.accuracy + p0?.latitude + p0?.longitude)
             }
 
             override fun onStatusChanged(p0: String?, p1: Int, p2: Bundle?) {
